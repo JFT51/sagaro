@@ -77,6 +77,12 @@ function App() {
     setSelectedActivity(null);
   };
 
+  const handleTabChange = (tab: string) => {
+    // Reset all selections when changing tabs
+    resetSelection();
+    setActiveTab(tab);
+  };
+
   const renderDetailView = (item: any, type: 'village' | 'restaurant' | 'event' | 'market' | 'activity') => {
     if (!item) return null;
 
@@ -141,29 +147,29 @@ function App() {
               <div className="flex items-center space-x-4">
                 <button
                   onClick={() => window.open(generateWazeUrl(item.coordinates.lat, item.coordinates.lng), '_blank')}
-                  className="flex items-center space-x-2 bg-white text-black px-6 py-3 rounded font-semibold hover:bg-gray-200 transition-colors"
+                  className="w-12 h-12 bg-blue-600 text-white rounded-full flex items-center justify-center hover:bg-blue-700 transition-colors"
+                  title={t.openWaze}
                 >
-                  <Play className="h-5 w-5" />
-                  <span>{t.openWaze}</span>
+                  <NavigationIcon className="h-5 w-5" />
                 </button>
                 
                 {item.phone && (
                   <button
                     onClick={() => window.open(`tel:${formatPhoneNumber(item.phone)}`, '_self')}
-                    className="flex items-center space-x-2 bg-gray-600 text-white px-6 py-3 rounded font-semibold hover:bg-gray-500 transition-colors"
+                    className="w-12 h-12 bg-green-600 text-white rounded-full flex items-center justify-center hover:bg-green-700 transition-colors"
+                    title={t.callPhone}
                   >
                     <Phone className="h-5 w-5" />
-                    <span>{t.callPhone}</span>
                   </button>
                 )}
                 
                 {item.website && (
                   <button
                     onClick={() => window.open(item.website, '_blank')}
-                    className="flex items-center space-x-2 bg-gray-600 text-white px-6 py-3 rounded font-semibold hover:bg-gray-500 transition-colors"
+                    className="w-12 h-12 bg-purple-600 text-white rounded-full flex items-center justify-center hover:bg-purple-700 transition-colors"
+                    title={t.visitWebsite}
                   >
                     <ExternalLink className="h-5 w-5" />
-                    <span>{t.visitWebsite}</span>
                   </button>
                 )}
               </div>
@@ -887,7 +893,7 @@ function App() {
 
   return (
     <div className="min-h-screen bg-black text-white flex">
-      <Navigation activeTab={activeTab} onTabChange={setActiveTab} language={language} />
+      <Navigation activeTab={activeTab} onTabChange={handleTabChange} language={language} />
       
       <div className="flex-1 flex flex-col">
         <Header language={language} onLanguageChange={changeLanguage} />

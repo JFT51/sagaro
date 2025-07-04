@@ -1,8 +1,7 @@
 import React from 'react';
-import { MapPin, Calendar, Clock, Tag, Euro, Play } from 'lucide-react';
+import { Calendar, Clock, Tag, Euro, Play } from 'lucide-react';
 import { Event, Language } from '../types';
 import { translations } from '../data/translations';
-import { generateWazeUrl } from '../utils/calendar';
 
 interface EventCardProps {
   event: Event;
@@ -12,11 +11,6 @@ interface EventCardProps {
 
 const EventCard: React.FC<EventCardProps> = ({ event, language, onViewDetails }) => {
   const t = translations[language];
-
-  const handleWazeClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    window.open(generateWazeUrl(event.coordinates.lat, event.coordinates.lng), '_blank');
-  };
 
   const formatDate = (dateString: string) => {
     const date = new Date(dateString);
@@ -42,17 +36,10 @@ const EventCard: React.FC<EventCardProps> = ({ event, language, onViewDetails })
           <div className="text-center">
             <button
               onClick={() => onViewDetails(event.id)}
-              className="flex items-center space-x-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors mb-3"
+              className="flex items-center space-x-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors"
             >
               <Play className="h-5 w-5" />
               <span>{t.viewDetails}</span>
-            </button>
-            <button
-              onClick={handleWazeClick}
-              className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 transition-colors"
-            >
-              <MapPin className="h-4 w-4" />
-              <span>{t.openWaze}</span>
             </button>
           </div>
         </div>
@@ -83,7 +70,7 @@ const EventCard: React.FC<EventCardProps> = ({ event, language, onViewDetails })
         
         <div className="flex items-center justify-between text-sm text-gray-500">
           <div className="flex items-center space-x-1">
-            <MapPin className="h-4 w-4" />
+            <Calendar className="h-4 w-4" />
             <span>{event.location}</span>
           </div>
           <div className="flex items-center space-x-1">

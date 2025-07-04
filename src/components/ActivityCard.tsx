@@ -1,8 +1,7 @@
 import React from 'react';
-import { MapPin, Clock, Activity, Euro, Phone, ExternalLink, Play } from 'lucide-react';
+import { Clock, Activity, Euro, Play } from 'lucide-react';
 import { Activity as ActivityType, Language } from '../types';
 import { translations } from '../data/translations';
-import { generateWazeUrl, formatPhoneNumber } from '../utils/calendar';
 
 interface ActivityCardProps {
   activity: ActivityType;
@@ -12,25 +11,6 @@ interface ActivityCardProps {
 
 const ActivityCard: React.FC<ActivityCardProps> = ({ activity, language, onViewDetails }) => {
   const t = translations[language];
-
-  const handleWazeClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    window.open(generateWazeUrl(activity.coordinates.lat, activity.coordinates.lng), '_blank');
-  };
-
-  const handlePhoneClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (activity.phone) {
-      window.open(`tel:${formatPhoneNumber(activity.phone)}`, '_self');
-    }
-  };
-
-  const handleWebsiteClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    if (activity.website) {
-      window.open(activity.website, '_blank');
-    }
-  };
 
   const getDifficultyColor = (difficulty: string) => {
     switch (difficulty.toLowerCase()) {
@@ -60,38 +40,11 @@ const ActivityCard: React.FC<ActivityCardProps> = ({ activity, language, onViewD
           <div className="text-center">
             <button
               onClick={() => onViewDetails(activity.id)}
-              className="flex items-center space-x-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors mb-3"
+              className="flex items-center space-x-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors"
             >
               <Play className="h-5 w-5" />
               <span>{t.viewDetails}</span>
             </button>
-            <div className="flex space-x-2">
-              <button
-                onClick={handleWazeClick}
-                className="bg-blue-600 text-white p-2 rounded-full hover:bg-blue-700 transition-colors"
-                title={t.openWaze}
-              >
-                <MapPin className="h-4 w-4" />
-              </button>
-              {activity.phone && (
-                <button
-                  onClick={handlePhoneClick}
-                  className="bg-green-600 text-white p-2 rounded-full hover:bg-green-700 transition-colors"
-                  title={t.callPhone}
-                >
-                  <Phone className="h-4 w-4" />
-                </button>
-              )}
-              {activity.website && (
-                <button
-                  onClick={handleWebsiteClick}
-                  className="bg-purple-600 text-white p-2 rounded-full hover:bg-purple-700 transition-colors"
-                  title={t.visitWebsite}
-                >
-                  <ExternalLink className="h-4 w-4" />
-                </button>
-              )}
-            </div>
           </div>
         </div>
 

@@ -1,8 +1,7 @@
 import React from 'react';
-import { MapPin, Calendar, Clock, ShoppingBag, Play } from 'lucide-react';
+import { Calendar, ShoppingBag, Play } from 'lucide-react';
 import { Market, Language } from '../types';
 import { translations } from '../data/translations';
-import { generateWazeUrl } from '../utils/calendar';
 
 interface MarketCardProps {
   market: Market;
@@ -12,11 +11,6 @@ interface MarketCardProps {
 
 const MarketCard: React.FC<MarketCardProps> = ({ market, language, onViewDetails }) => {
   const t = translations[language];
-
-  const handleWazeClick = (e: React.MouseEvent) => {
-    e.stopPropagation();
-    window.open(generateWazeUrl(market.coordinates.lat, market.coordinates.lng), '_blank');
-  };
 
   return (
     <div className="group relative bg-gray-900 rounded-lg overflow-hidden hover:scale-105 transition-all duration-300 cursor-pointer">
@@ -33,17 +27,10 @@ const MarketCard: React.FC<MarketCardProps> = ({ market, language, onViewDetails
           <div className="text-center">
             <button
               onClick={() => onViewDetails(market.id)}
-              className="flex items-center space-x-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors mb-3"
+              className="flex items-center space-x-2 bg-white text-black px-6 py-3 rounded-full font-semibold hover:bg-gray-200 transition-colors"
             >
               <Play className="h-5 w-5" />
               <span>{t.viewDetails}</span>
-            </button>
-            <button
-              onClick={handleWazeClick}
-              className="flex items-center space-x-2 bg-blue-600 text-white px-4 py-2 rounded-full text-sm hover:bg-blue-700 transition-colors"
-            >
-              <MapPin className="h-4 w-4" />
-              <span>{t.openWaze}</span>
             </button>
           </div>
         </div>

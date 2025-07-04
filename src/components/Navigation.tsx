@@ -48,7 +48,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange, languag
       {/* Mobile Hamburger Button - Fixed Position */}
       <button
         onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-        className="lg:hidden fixed top-4 left-4 z-50 bg-black border border-gray-800 text-white p-3 rounded-lg shadow-lg hover:bg-gray-900 transition-colors"
+        className="lg:hidden fixed top-4 left-4 z-50 bg-red-600 border border-red-500 text-white p-3 rounded-lg shadow-lg hover:bg-red-700 transition-colors"
         aria-label="Toggle menu"
       >
         {isMobileMenuOpen ? (
