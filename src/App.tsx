@@ -96,7 +96,7 @@ function App() {
           <div className="relative z-10 flex flex-col justify-end h-full p-8 max-w-7xl mx-auto">
             <button
               onClick={resetSelection}
-              className="absolute top-8 left-8 flex items-center space-x-2 text-white/80 hover:text-white transition-colors bg-black/50 px-4 py-2 rounded-full"
+              className="absolute top-8 left-8 lg:left-8 flex items-center space-x-2 text-white/80 hover:text-white transition-colors bg-black/50 px-4 py-2 rounded-full"
             >
               <ArrowLeft className="h-5 w-5" />
               <span>{t.backToList}</span>

@@ -8,7 +8,9 @@ import {
   Activity, 
   CalendarDays,
   Info,
-  MessageCircle
+  MessageCircle,
+  Menu,
+  X
 } from 'lucide-react';
 import { Language } from '../types';
 import { translations } from '../data/translations';
@@ -21,6 +23,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange, language }) => {
   const [isHovered, setIsHovered] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
   const t = translations[language];
 
   const tabs = [
@@ -35,49 +38,115 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange, languag
     { id: 'chat', icon: MessageCircle, label: t.chat }
   ];
 
+  const handleTabChange = (tabId: string) => {
+    onTabChange(tabId);
+    setIsMobileMenuOpen(false); // Close mobile menu when tab is selected
+  };
+
   return (
-    <nav 
-      className={`bg-black border-r border-gray-800 transition-all duration-300 ease-in-out ${
-        isHovered ? 'w-64' : 'w-16'
-      } flex flex-col`}
-      onMouseEnter={() => setIsHovered(true)}
-      onMouseLeave={() => setIsHovered(false)}
-    >
-      <div className="p-4">
-        <div className="flex items-center space-x-3">
-          <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center flex-shrink-0">
-            <MapPin className="h-5 w-5 text-white" />
-          </div>
-          <div className={`transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
-            <h1 className="text-lg font-bold text-white whitespace-nowrap">S'Agaro Guide</h1>
+    <>
+      {/* Mobile Hamburger Button - Fixed Position */}
+      <button
+        onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+        className="lg:hidden fixed top-4 left-4 z-50 bg-black border border-gray-800 text-white p-3 rounded-lg shadow-lg hover:bg-gray-900 transition-colors"
+        aria-label="Toggle menu"
+      >
+        {isMobileMenuOpen ? (
+          <X className="h-6 w-6" />
+        ) : (
+          <Menu className="h-6 w-6" />
+        )}
+      </button>
+
+      {/* Mobile Menu Overlay */}
+      {isMobileMenuOpen && (
+        <div className="lg:hidden fixed inset-0 z-40">
+          {/* Backdrop */}
+          <div 
+            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
+            onClick={() => setIsMobileMenuOpen(false)}
+          />
+          
+          {/* Menu Content */}
+          <div className="absolute left-0 top-0 h-full w-80 bg-black border-r border-gray-800 shadow-xl">
+            <div className="p-4 pt-20">
+              <div className="flex items-center space-x-3 mb-8">
+                <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center flex-shrink-0">
+                  <MapPin className="h-5 w-5 text-white" />
+                </div>
+                <div>
+                  <h1 className="text-lg font-bold text-white">S'Agaro Guide</h1>
+                </div>
+              </div>
+
+              <div className="space-y-2">
+                {tabs.map((tab) => {
+                  const Icon = tab.icon;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => handleTabChange(tab.id)}
+                      className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition-all duration-200 rounded-lg ${
+                        activeTab === tab.id
+                          ? 'bg-red-600 text-white'
+                          : 'text-gray-400 hover:text-white hover:bg-gray-900'
+                      }`}
+                    >
+                      <Icon className="h-5 w-5 flex-shrink-0" />
+                      <span className="whitespace-nowrap">{tab.label}</span>
+                    </button>
+                  );
+                })}
+              </div>
+            </div>
           </div>
         </div>
-      </div>
+      )}
 
-      <div className="flex-1 py-4">
-        {tabs.map((tab) => {
-          const Icon = tab.icon;
-          return (
-            <button
-              key={tab.id}
-              onClick={() => onTabChange(tab.id)}
-              className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition-all duration-200 ${
-                activeTab === tab.id
-                  ? 'bg-red-600 text-white border-r-2 border-red-400'
-                  : 'text-gray-400 hover:text-white hover:bg-gray-900'
-              }`}
-            >
-              <Icon className="h-5 w-5 flex-shrink-0" />
-              <span className={`whitespace-nowrap transition-opacity duration-300 ${
-                isHovered ? 'opacity-100' : 'opacity-0'
-              }`}>
-                {tab.label}
-              </span>
-            </button>
-          );
-        })}
-      </div>
-    </nav>
+      {/* Desktop Navigation - Hidden on Mobile */}
+      <nav 
+        className={`hidden lg:flex bg-black border-r border-gray-800 transition-all duration-300 ease-in-out ${
+          isHovered ? 'w-64' : 'w-16'
+        } flex-col`}
+        onMouseEnter={() => setIsHovered(true)}
+        onMouseLeave={() => setIsHovered(false)}
+      >
+        <div className="p-4">
+          <div className="flex items-center space-x-3">
+            <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center flex-shrink-0">
+              <MapPin className="h-5 w-5 text-white" />
+            </div>
+            <div className={`transition-opacity duration-300 ${isHovered ? 'opacity-100' : 'opacity-0'}`}>
+              <h1 className="text-lg font-bold text-white whitespace-nowrap">S'Agaro Guide</h1>
+            </div>
+          </div>
+        </div>
+
+        <div className="flex-1 py-4">
+          {tabs.map((tab) => {
+            const Icon = tab.icon;
+            return (
+              <button
+                key={tab.id}
+                onClick={() => onTabChange(tab.id)}
+                className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition-all duration-200 ${
+                  activeTab === tab.id
+                    ? 'bg-red-600 text-white border-r-2 border-red-400'
+                    : 'text-gray-400 hover:text-white hover:bg-gray-900'
+                }`}
+              >
+                <Icon className="h-5 w-5 flex-shrink-0" />
+                <span className={`whitespace-nowrap transition-opacity duration-300 ${
+                  isHovered ? 'opacity-100' : 'opacity-0'
+                }`}>
+                  {tab.label}
+                </span>
+              </button>
+            );
+          })}
+        </div>
+      </nav>
+    </>
   );
 };
 
