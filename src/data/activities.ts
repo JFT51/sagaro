@@ -14,7 +14,29 @@ export const activities: Activity[] = [
     price: 'Free',
     coordinates: { lat: 41.7833, lng: 3.0333 },
     bestTime: 'Morning or evening',
-    equipment: ['Comfortable shoes', 'Water', 'Camera', 'Sun protection']
+    equipment: ['Comfortable shoes', 'Water', 'Camera', 'Sun protection'],
+    detailedDescription: 'The Camí de Ronda is a historic coastal path that follows the rugged coastline of the Costa Brava. Originally used by guards to patrol the coast, this trail now offers hikers spectacular views of hidden coves, dramatic cliffs, and the sparkling Mediterranean Sea. The path winds through pine forests and along rocky shores, providing numerous photo opportunities and peaceful spots to rest.',
+    safetyInfo: [
+      'Stay on marked paths to avoid cliff edges',
+      'Bring plenty of water, especially in summer',
+      'Wear appropriate footwear with good grip',
+      'Check weather conditions before starting',
+      'Inform someone of your planned route'
+    ],
+    whatToExpect: 'Expect breathtaking coastal views, peaceful pine forests, and the sound of waves crashing against the rocks. The trail is well-marked but can be rocky in places. You\'ll encounter several viewpoints perfect for photography and small coves where you can take a break.',
+    instructor: {
+      name: 'Local Guide Available',
+      bio: 'Experienced local guides available for group tours',
+      experience: '10+ years',
+      certifications: 'Certified Nature Guide'
+    },
+    groupSize: '1-15 people',
+    ageLimit: 'All ages (children must be supervised)',
+    facilities: [
+      { name: 'Trail Markers', icon: 'accessible' },
+      { name: 'Scenic Viewpoints', icon: 'accessible' },
+      { name: 'Free Access', icon: 'accessible' }
+    ]
   },
   {
     id: 'scuba-diving',
@@ -31,7 +53,29 @@ export const activities: Activity[] = [
     phone: '+34 972 81 71 79',
     website: 'https://aquadiver.com',
     bestTime: 'Morning',
-    equipment: ['All equipment provided', 'Swimsuit', 'Towel']
+    equipment: ['All equipment provided', 'Swimsuit', 'Towel'],
+    detailedDescription: 'Discover the rich marine life of the Costa Brava\'s crystal-clear waters. This beginner-friendly diving experience includes a comprehensive safety briefing, equipment fitting, and guided underwater exploration. You\'ll explore rocky reefs, underwater caves, and encounter colorful Mediterranean fish species in depths of 6-12 meters.',
+    safetyInfo: [
+      'Medical questionnaire required before diving',
+      'No diving if you have respiratory or heart conditions',
+      'Maximum depth of 12 meters for beginners',
+      'Always dive with certified instructor',
+      'No flying for 18 hours after diving'
+    ],
+    whatToExpect: 'After a thorough briefing and equipment check, you\'ll enter the water from the beach or boat. Expect to see grouper, sea bream, octopus, and various Mediterranean fish species. The underwater visibility is typically excellent, ranging from 15-25 meters.',
+    instructor: {
+      name: 'PADI Certified Instructors',
+      bio: 'Professional diving instructors with extensive Mediterranean experience',
+      experience: '15+ years',
+      certifications: 'PADI Open Water Instructor'
+    },
+    groupSize: '2-6 people per instructor',
+    ageLimit: '10+ years (with parental consent)',
+    facilities: [
+      { name: 'Equipment Rental', icon: 'card' },
+      { name: 'Changing Rooms', icon: 'accessible' },
+      { name: 'Parking Available', icon: 'parking' }
+    ]
   },
   {
     id: 'kayaking',
@@ -47,7 +91,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.9167, lng: 3.1667 },
     phone: '+34 972 61 41 75',
     bestTime: 'Morning or afternoon',
-    equipment: ['Kayak provided', 'Life jacket', 'Waterproof bag']
+    equipment: ['Kayak provided', 'Life jacket', 'Waterproof bag'],
+    detailedDescription: 'Explore the stunning coastline of Calella de Palafrugell by sea kayak. This guided tour takes you along dramatic cliffs, into hidden coves, and past charming fishing villages. No previous kayaking experience is required as the route is suitable for beginners and the sea conditions are typically calm.',
+    safetyInfo: [
+      'Life jackets must be worn at all times',
+      'Stay close to the guide and group',
+      'Inform guide of any swimming difficulties',
+      'Sun protection is essential',
+      'Tours may be cancelled in bad weather'
+    ],
+    whatToExpect: 'You\'ll paddle along the scenic coastline, stopping at secluded beaches and coves for swimming and snorkeling. The guide will share information about local marine life and coastal geology. Expect to see crystal-clear waters, dramatic rock formations, and possibly dolphins.',
+    instructor: {
+      name: 'Certified Kayak Guides',
+      bio: 'Experienced sea kayaking guides with local coastal knowledge',
+      experience: '8+ years',
+      certifications: 'Sea Kayak Guide Certification'
+    },
+    groupSize: '4-12 people',
+    ageLimit: '12+ years',
+    facilities: [
+      { name: 'Equipment Included', icon: 'accessible' },
+      { name: 'Beach Launch', icon: 'accessible' },
+      { name: 'Snorkel Gear', icon: 'card' }
+    ]
   },
   {
     id: 'cycling-tour',
@@ -63,7 +129,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.9667, lng: 3.1500 },
     phone: '+34 972 63 69 28',
     bestTime: 'Morning',
-    equipment: ['Bike rental available', 'Helmet', 'Water bottle']
+    equipment: ['Bike rental available', 'Helmet', 'Water bottle'],
+    detailedDescription: 'This guided cycling tour takes you through the heart of the Empordà region, visiting beautifully preserved medieval villages including Pals, Peratallada, and Ullastret. The route follows quiet country roads and cycling paths through rice fields, vineyards, and olive groves.',
+    safetyInfo: [
+      'Helmets are mandatory and provided',
+      'Stay in single file on narrow roads',
+      'Follow traffic rules and guide instructions',
+      'Bring sun protection and water',
+      'Basic cycling fitness required'
+    ],
+    whatToExpect: 'Cycle through stunning countryside landscapes, visit medieval stone villages, and enjoy local refreshments. The route includes gentle hills and flat sections through agricultural areas. You\'ll have time to explore each village and learn about their history.',
+    instructor: {
+      name: 'Local Cycling Guides',
+      bio: 'Knowledgeable local guides passionate about cycling and regional history',
+      experience: '12+ years',
+      certifications: 'Cycling Tour Guide License'
+    },
+    groupSize: '6-15 people',
+    ageLimit: '14+ years',
+    facilities: [
+      { name: 'Bike Rental', icon: 'card' },
+      { name: 'Helmet Included', icon: 'accessible' },
+      { name: 'Support Vehicle', icon: 'accessible' }
+    ]
   },
   {
     id: 'fishing-trip',
@@ -79,7 +167,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.8500, lng: 3.1333 },
     phone: '+34 972 31 41 55',
     bestTime: 'Early morning',
-    equipment: ['All equipment provided', 'Sun protection', 'Comfortable clothes']
+    equipment: ['All equipment provided', 'Sun protection', 'Comfortable clothes'],
+    detailedDescription: 'Experience traditional Mediterranean fishing methods with local fishermen from Palamós. Learn about sustainable fishing practices, try your hand at different fishing techniques, and understand the importance of the sea to local communities. The trip includes fishing for various Mediterranean species.',
+    safetyInfo: [
+      'Life jackets provided and must be worn',
+      'Follow all safety instructions from crew',
+      'Inform crew of any seasickness susceptibility',
+      'Stay seated when boat is moving',
+      'No swimming from the boat'
+    ],
+    whatToExpect: 'Early morning departure from Palamós port, fishing in traditional grounds, learning about local fishing techniques, and possibly catching sea bream, mackerel, or other Mediterranean fish. Includes traditional fisherman\'s breakfast.',
+    instructor: {
+      name: 'Local Fishermen',
+      bio: 'Experienced local fishermen sharing traditional knowledge',
+      experience: '20+ years',
+      certifications: 'Professional Fishing License'
+    },
+    groupSize: '4-8 people',
+    ageLimit: '8+ years (with adult supervision)',
+    facilities: [
+      { name: 'Traditional Boat', icon: 'accessible' },
+      { name: 'Fishing Equipment', icon: 'accessible' },
+      { name: 'Breakfast Included', icon: 'card' }
+    ]
   },
   {
     id: 'wine-tour',
@@ -96,7 +206,29 @@ export const activities: Activity[] = [
     phone: '+34 972 20 91 56',
     website: 'https://empordawines.com',
     bestTime: 'Afternoon',
-    equipment: ['Transportation included', 'Comfortable shoes']
+    equipment: ['Transportation included', 'Comfortable shoes'],
+    detailedDescription: 'Discover the wines of the Empordà DO region on this comprehensive wine tour. Visit 2-3 carefully selected wineries, learn about local grape varieties, winemaking processes, and taste a variety of wines paired with local products. The tour includes transportation and a traditional lunch.',
+    safetyInfo: [
+      'Responsible drinking - designated driver provided',
+      'Inform guide of any allergies',
+      'Comfortable walking shoes recommended',
+      'Stay with the group at all times',
+      'Minimum age 18 for wine tasting'
+    ],
+    whatToExpect: 'Visit family-owned wineries, walk through vineyards, learn about wine production, taste 8-12 different wines, enjoy local cheese and charcuterie pairings, and experience the passion of local winemakers.',
+    instructor: {
+      name: 'Wine Tourism Specialist',
+      bio: 'Certified sommelier and wine tourism expert',
+      experience: '10+ years',
+      certifications: 'Certified Sommelier, Wine Tourism Guide'
+    },
+    groupSize: '8-16 people',
+    ageLimit: '18+ years',
+    facilities: [
+      { name: 'Transportation', icon: 'accessible' },
+      { name: 'Wine Tastings', icon: 'card' },
+      { name: 'Lunch Included', icon: 'card' }
+    ]
   },
   {
     id: 'snorkeling',
@@ -112,7 +244,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.9333, lng: 3.2000 },
     phone: '+34 972 62 21 31',
     bestTime: 'Morning',
-    equipment: ['Snorkel gear available', 'Swimsuit', 'Towel']
+    equipment: ['Snorkel gear available', 'Swimsuit', 'Towel'],
+    detailedDescription: 'Explore the underwater world of Tamariu\'s protected marine area. This guided snorkeling experience is perfect for beginners and families. The calm, clear waters provide excellent visibility to observe Mediterranean marine life including colorful fish, sea urchins, and underwater rock formations.',
+    safetyInfo: [
+      'Basic swimming ability required',
+      'Stay close to the guide',
+      'Don\'t touch marine life or coral',
+      'Use reef-safe sunscreen only',
+      'Exit water if feeling uncomfortable'
+    ],
+    whatToExpect: 'Crystal clear waters with 15-20 meter visibility, diverse marine life including wrasse, sea bream, and octopus, underwater rock formations, and possibly sea turtles. The guide will point out interesting species and explain the marine ecosystem.',
+    instructor: {
+      name: 'Marine Biology Guide',
+      bio: 'Marine biologist specializing in Mediterranean ecosystems',
+      experience: '7+ years',
+      certifications: 'Marine Biology Degree, Snorkel Guide'
+    },
+    groupSize: '4-10 people',
+    ageLimit: '8+ years (swimming ability required)',
+    facilities: [
+      { name: 'Equipment Rental', icon: 'card' },
+      { name: 'Beach Access', icon: 'accessible' },
+      { name: 'Changing Areas', icon: 'accessible' }
+    ]
   },
   {
     id: 'pottery-workshop',
@@ -128,7 +282,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.9667, lng: 3.0333 },
     phone: '+34 972 64 20 67',
     bestTime: 'Morning or afternoon',
-    equipment: ['All materials provided', 'Apron recommended']
+    equipment: ['All materials provided', 'Apron recommended'],
+    detailedDescription: 'Learn the ancient art of pottery in La Bisbal d\'Empordà, the ceramic capital of Catalonia. Work with local master potters to create your own ceramic piece using traditional techniques passed down through generations. The workshop includes clay preparation, shaping, and glazing.',
+    safetyInfo: [
+      'Wear old clothes or bring apron',
+      'Wash hands thoroughly after working with clay',
+      'Be careful around pottery wheels',
+      'Follow instructor\'s guidance with tools',
+      'Clay dust - inform of respiratory issues'
+    ],
+    whatToExpect: 'Hands-on pottery experience, learning traditional Catalan ceramic techniques, creating your own piece to take home (after firing), understanding the history of local ceramics, and visiting the pottery quarter.',
+    instructor: {
+      name: 'Master Potter',
+      bio: 'Third-generation potter specializing in traditional Catalan ceramics',
+      experience: '25+ years',
+      certifications: 'Master Artisan Certification'
+    },
+    groupSize: '6-12 people',
+    ageLimit: '10+ years',
+    facilities: [
+      { name: 'Pottery Studio', icon: 'accessible' },
+      { name: 'All Materials', icon: 'card' },
+      { name: 'Take Home Piece', icon: 'accessible' }
+    ]
   },
   {
     id: 'rock-climbing',
@@ -144,7 +320,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 42.0333, lng: 3.1167 },
     phone: '+34 972 75 81 91',
     bestTime: 'Morning',
-    equipment: ['Climbing gear provided', 'Athletic wear', 'Closed shoes']
+    equipment: ['Climbing gear provided', 'Athletic wear', 'Closed shoes'],
+    detailedDescription: 'Experience rock climbing on the spectacular limestone cliffs of the Montgrí Natural Park. This guided climbing experience offers routes suitable for beginners to intermediate climbers, with stunning views over the Costa Brava and the Medes Islands.',
+    safetyInfo: [
+      'All safety equipment provided and checked',
+      'Helmets mandatory at all times',
+      'Follow guide instructions precisely',
+      'Inform guide of any medical conditions',
+      'Weather dependent activity'
+    ],
+    whatToExpect: 'Technical instruction on climbing techniques, multiple climbing routes of varying difficulty, spectacular panoramic views, and the thrill of scaling natural rock faces. Equipment instruction and safety briefing included.',
+    instructor: {
+      name: 'Certified Climbing Guide',
+      bio: 'Professional climbing instructor with extensive experience in the Montgrí area',
+      experience: '15+ years',
+      certifications: 'UIAGM Mountain Guide'
+    },
+    groupSize: '3-6 people',
+    ageLimit: '14+ years',
+    facilities: [
+      { name: 'Safety Equipment', icon: 'accessible' },
+      { name: 'Multiple Routes', icon: 'accessible' },
+      { name: 'Scenic Views', icon: 'accessible' }
+    ]
   },
   {
     id: 'sailing-lesson',
@@ -160,7 +358,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 42.2667, lng: 3.1833 },
     phone: '+34 972 25 73 84',
     bestTime: 'Afternoon',
-    equipment: ['Boat provided', 'Life jacket', 'Sun protection']
+    equipment: ['Boat provided', 'Life jacket', 'Sun protection'],
+    detailedDescription: 'Learn the basics of sailing in the protected waters of the Bay of Roses. This beginner-friendly course covers sail handling, steering, basic navigation, and safety procedures. The bay\'s consistent winds and calm waters make it ideal for learning.',
+    safetyInfo: [
+      'Life jackets must be worn at all times',
+      'Listen carefully to instructor commands',
+      'Stay seated unless instructed otherwise',
+      'Inform instructor of swimming ability',
+      'Lessons cancelled in strong winds'
+    ],
+    whatToExpect: 'Basic sailing theory, hands-on practice with steering and sail handling, understanding wind direction and boat movement, and the satisfaction of sailing independently by the end of the lesson.',
+    instructor: {
+      name: 'RYA Certified Instructor',
+      bio: 'Professional sailing instructor with Mediterranean expertise',
+      experience: '12+ years',
+      certifications: 'RYA Yachtmaster Instructor'
+    },
+    groupSize: '2-4 people per boat',
+    ageLimit: '12+ years',
+    facilities: [
+      { name: 'Training Boats', icon: 'accessible' },
+      { name: 'Safety Equipment', icon: 'accessible' },
+      { name: 'Marina Facilities', icon: 'card' }
+    ]
   },
   {
     id: 'horseback-riding',
@@ -176,7 +396,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.9500, lng: 3.2167 },
     phone: '+34 972 62 41 89',
     bestTime: 'Morning or evening',
-    equipment: ['Helmet provided', 'Long pants', 'Closed shoes']
+    equipment: ['Helmet provided', 'Long pants', 'Closed shoes'],
+    detailedDescription: 'Discover the beautiful Empordà countryside on horseback, following ancient paths through pine forests, olive groves, and along coastal cliffs. This guided ride is suitable for beginners and experienced riders alike, with gentle, well-trained horses.',
+    safetyInfo: [
+      'Helmets mandatory and provided',
+      'Follow guide instructions at all times',
+      'Wear appropriate clothing and footwear',
+      'Inform guide of riding experience level',
+      'Stay calm and gentle with horses'
+    ],
+    whatToExpected: 'Peaceful ride through Mediterranean countryside, stunning coastal views, interaction with gentle horses, and the unique perspective of exploring the landscape on horseback.',
+    instructor: {
+      name: 'Experienced Horse Guide',
+      bio: 'Professional equestrian guide with local area expertise',
+      experience: '18+ years',
+      certifications: 'Equestrian Guide License'
+    },
+    groupSize: '4-8 people',
+    ageLimit: '10+ years',
+    facilities: [
+      { name: 'Well-trained Horses', icon: 'accessible' },
+      { name: 'Safety Equipment', icon: 'accessible' },
+      { name: 'Scenic Routes', icon: 'accessible' }
+    ]
   },
   {
     id: 'stand-up-paddle',
@@ -192,7 +434,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 42.2889, lng: 3.2794 },
     phone: '+34 972 25 81 55',
     bestTime: 'Morning',
-    equipment: ['SUP board provided', 'Paddle', 'Leash']
+    equipment: ['SUP board provided', 'Paddle', 'Leash'],
+    detailedDescription: 'Experience the tranquility of stand-up paddleboarding in the pristine waters around Cadaqués. This activity combines gentle exercise with the opportunity to explore hidden coves and enjoy unique perspectives of this famous white village.',
+    safetyInfo: [
+      'Basic swimming ability required',
+      'Wear leash at all times',
+      'Stay within designated area',
+      'Inform instructor of any concerns',
+      'Activity cancelled in rough conditions'
+    ],
+    whatToExpect: 'Calm, clear waters perfect for SUP, instruction on paddling technique and balance, exploration of small coves, and peaceful time on the water with beautiful coastal scenery.',
+    instructor: {
+      name: 'SUP Instructor',
+      bio: 'Certified stand-up paddleboard instructor',
+      experience: '6+ years',
+      certifications: 'SUP Instructor Certification'
+    },
+    groupSize: '4-8 people',
+    ageLimit: '12+ years (swimming required)',
+    facilities: [
+      { name: 'Equipment Included', icon: 'accessible' },
+      { name: 'Beach Launch', icon: 'accessible' },
+      { name: 'Calm Waters', icon: 'accessible' }
+    ]
   },
   {
     id: 'cooking-class',
@@ -208,7 +472,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 42.2667, lng: 2.9667 },
     phone: '+34 972 50 31 55',
     bestTime: 'Morning',
-    equipment: ['All ingredients provided', 'Apron', 'Recipe book']
+    equipment: ['All ingredients provided', 'Apron', 'Recipe book'],
+    detailedDescription: 'Immerse yourself in Catalan culinary culture by learning to prepare traditional dishes using local ingredients. This hands-on cooking class covers classic recipes like paella, escalivada, and crema catalana, followed by enjoying your creations.',
+    safetyInfo: [
+      'Inform chef of any food allergies',
+      'Follow kitchen safety procedures',
+      'Wash hands frequently',
+      'Be careful with hot surfaces and knives',
+      'Wear provided apron'
+    ],
+    whatToExpect: 'Market visit to select fresh ingredients, hands-on cooking instruction, learning traditional techniques, preparing 3-4 classic dishes, and enjoying a meal with wine pairing.',
+    instructor: {
+      name: 'Professional Chef',
+      bio: 'Local chef specializing in traditional Catalan cuisine',
+      experience: '20+ years',
+      certifications: 'Culinary Arts Degree'
+    },
+    groupSize: '6-12 people',
+    ageLimit: '16+ years',
+    facilities: [
+      { name: 'Professional Kitchen', icon: 'accessible' },
+      { name: 'All Ingredients', icon: 'card' },
+      { name: 'Recipe Book', icon: 'accessible' }
+    ]
   },
   {
     id: 'paragliding',
@@ -224,7 +510,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 42.1167, lng: 3.1333 },
     phone: '+34 972 77 31 42',
     bestTime: 'Morning',
-    equipment: ['All equipment provided', 'Comfortable clothes', 'Closed shoes']
+    equipment: ['All equipment provided', 'Comfortable clothes', 'Closed shoes'],
+    detailedDescription: 'Experience the ultimate aerial adventure with a tandem paragliding flight over the stunning Costa Brava coastline. Soar like a bird above beaches, cliffs, and medieval villages while enjoying breathtaking panoramic views of the Mediterranean.',
+    safetyInfo: [
+      'Tandem flight with certified instructor',
+      'Weather dependent activity',
+      'Weight limits apply (max 100kg)',
+      'No heart or back problems',
+      'Follow all instructor commands'
+    ],
+    whatToExpect: 'Safety briefing and equipment check, transport to launch site, tandem flight lasting 15-25 minutes, spectacular aerial views of the coastline, and an unforgettable adrenaline experience.',
+    instructor: {
+      name: 'Certified Paragliding Pilot',
+      bio: 'Professional paragliding instructor with thousands of flights',
+      experience: '15+ years',
+      certifications: 'Paragliding Instructor License'
+    },
+    groupSize: '1-4 people (individual flights)',
+    ageLimit: '16+ years',
+    facilities: [
+      { name: 'Professional Equipment', icon: 'accessible' },
+      { name: 'Transport to Launch', icon: 'accessible' },
+      { name: 'Photo/Video Service', icon: 'card' }
+    ]
   },
   {
     id: 'boat-tour',
@@ -240,7 +548,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.9000, lng: 3.1833 },
     phone: '+34 972 30 21 03',
     bestTime: 'Morning or afternoon',
-    equipment: ['Life jacket provided', 'Sun protection', 'Swimwear']
+    equipment: ['Life jacket provided', 'Sun protection', 'Swimwear'],
+    detailedDescription: 'Explore the hidden gems of the Costa Brava coastline by boat, visiting secluded coves and beaches only accessible from the sea. This relaxing tour includes swimming stops, snorkeling opportunities, and stunning coastal scenery.',
+    safetyInfo: [
+      'Life jackets available and recommended',
+      'Stay seated when boat is moving',
+      'Follow captain\'s safety instructions',
+      'Inform crew of swimming ability',
+      'Bring sun protection'
+    ],
+    whatToExpect: 'Scenic coastal cruise, visits to hidden coves, swimming and snorkeling stops, spectacular cliff formations, and possibly dolphin sightings. Includes refreshments on board.',
+    instructor: {
+      name: 'Licensed Boat Captain',
+      bio: 'Experienced local captain with extensive coastal knowledge',
+      experience: '20+ years',
+      certifications: 'Commercial Boat License'
+    },
+    groupSize: '8-20 people',
+    ageLimit: 'All ages (children supervised)',
+    facilities: [
+      { name: 'Comfortable Boat', icon: 'accessible' },
+      { name: 'Snorkel Equipment', icon: 'card' },
+      { name: 'Refreshments', icon: 'card' }
+    ]
   },
   {
     id: 'hiking-cap-creus',
@@ -256,7 +586,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 42.3333, lng: 3.2833 },
     phone: '+34 972 38 71 22',
     bestTime: 'Morning',
-    equipment: ['Hiking boots', 'Water', 'Sun protection', 'Camera']
+    equipment: ['Hiking boots', 'Water', 'Sun protection', 'Camera'],
+    detailedDescription: 'Discover the wild beauty of Cap de Creus Natural Park, Spain\'s easternmost point. This guided hike explores dramatic landscapes sculpted by wind and sea, unique rock formations, and diverse Mediterranean vegetation.',
+    safetyInfo: [
+      'Wear appropriate hiking footwear',
+      'Bring plenty of water (2L minimum)',
+      'Use sun protection - limited shade',
+      'Stay on marked trails',
+      'Inform guide of any medical conditions'
+    ],
+    whatToExpect: 'Rugged coastal landscapes, unique geological formations, diverse flora and fauna, spectacular viewpoints, and the lighthouse at Spain\'s easternmost point.',
+    instructor: {
+      name: 'Nature Guide',
+      bio: 'Local naturalist guide specializing in Cap de Creus ecology',
+      experience: '10+ years',
+      certifications: 'Nature Guide Certification'
+    },
+    groupSize: '6-15 people',
+    ageLimit: '12+ years (good fitness required)',
+    facilities: [
+      { name: 'Natural Park', icon: 'accessible' },
+      { name: 'Marked Trails', icon: 'accessible' },
+      { name: 'Scenic Viewpoints', icon: 'accessible' }
+    ]
   },
   {
     id: 'jet-ski-tour',
@@ -272,7 +624,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 42.2500, lng: 3.1167 },
     phone: '+34 972 45 08 33',
     bestTime: 'Afternoon',
-    equipment: ['Jet ski provided', 'Life jacket', 'Wetsuit if needed']
+    equipment: ['Jet ski provided', 'Life jacket', 'Wetsuit if needed'],
+    detailedDescription: 'Experience the thrill of jet skiing along the beautiful Costa Brava coastline. This guided tour combines adrenaline with sightseeing as you speed past beaches, cliffs, and coastal landmarks while enjoying the freedom of the open water.',
+    safetyInfo: [
+      'Valid driving license required',
+      'Life jacket mandatory',
+      'Follow guide at all times',
+      'Minimum age restrictions apply',
+      'Weather and sea conditions dependent'
+    ],
+    whatToExpect: 'High-speed coastal adventure, spectacular sea views, adrenaline rush, guided tour with stops for photos, and the excitement of controlling your own jet ski.',
+    instructor: {
+      name: 'Jet Ski Guide',
+      bio: 'Certified jet ski instructor and coastal guide',
+      experience: '8+ years',
+      certifications: 'Jet Ski Instructor License'
+    },
+    groupSize: '4-8 people',
+    ageLimit: '16+ years (with license)',
+    facilities: [
+      { name: 'Modern Jet Skis', icon: 'accessible' },
+      { name: 'Safety Equipment', icon: 'accessible' },
+      { name: 'Marina Launch', icon: 'accessible' }
+    ]
   },
   {
     id: 'archaeological-tour',
@@ -288,7 +662,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 42.1333, lng: 3.1167 },
     phone: '+34 972 77 02 08',
     bestTime: 'Morning or afternoon',
-    equipment: ['Comfortable shoes', 'Sun protection', 'Camera']
+    equipment: ['Comfortable shoes', 'Sun protection', 'Camera'],
+    detailedDescription: 'Step back in time at the archaeological site of Empúries, where Greek and Roman civilizations left their mark on the Iberian Peninsula. This guided tour explores well-preserved ruins including temples, houses, and mosaics.',
+    safetyInfo: [
+      'Wear comfortable walking shoes',
+      'Bring sun protection',
+      'Stay on designated paths',
+      'Don\'t touch archaeological remains',
+      'Follow guide instructions'
+    ],
+    whatToExpect: 'Ancient Greek and Roman ruins, well-preserved mosaics, historical insights, beautiful coastal setting, and understanding of Mediterranean ancient civilizations.',
+    instructor: {
+      name: 'Archaeologist Guide',
+      bio: 'Professional archaeologist specializing in Mediterranean ancient history',
+      experience: '15+ years',
+      certifications: 'Archaeology Degree, Museum Guide'
+    },
+    groupSize: '10-25 people',
+    ageLimit: 'All ages',
+    facilities: [
+      { name: 'Archaeological Site', icon: 'accessible' },
+      { name: 'Museum', icon: 'accessible' },
+      { name: 'Visitor Center', icon: 'card' }
+    ]
   },
   {
     id: 'mountain-biking',
@@ -304,7 +700,29 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.7833, lng: 3.0333 },
     phone: '+34 972 32 71 93',
     bestTime: 'Morning',
-    equipment: ['Mountain bike rental', 'Helmet', 'Protective gear']
+    equipment: ['Mountain bike rental', 'Helmet', 'Protective gear'],
+    detailedDescription: 'Challenge yourself on the mountain bike trails of the Gavarres massif. These technical trails wind through cork oak forests, offer stunning views, and provide an adrenaline-filled adventure for experienced mountain bikers.',
+    safetyInfo: [
+      'Advanced mountain biking experience required',
+      'Helmet and protective gear mandatory',
+      'Stay on marked trails only',
+      'Carry repair kit and first aid',
+      'Inform guide of fitness level'
+    ],
+    whatToExpect: 'Technical single-track trails, challenging climbs and descents, cork oak forest scenery, panoramic views, and an intense mountain biking workout.',
+    instructor: {
+      name: 'Mountain Bike Guide',
+      bio: 'Professional mountain bike guide and trail expert',
+      experience: '12+ years',
+      certifications: 'Mountain Bike Guide License'
+    },
+    groupSize: '4-8 people',
+    ageLimit: '16+ years (advanced level)',
+    facilities: [
+      { name: 'Quality Bikes', icon: 'card' },
+      { name: 'Safety Gear', icon: 'accessible' },
+      { name: 'Trail Maps', icon: 'accessible' }
+    ]
   },
   {
     id: 'flamenco-class',
@@ -320,6 +738,28 @@ export const activities: Activity[] = [
     coordinates: { lat: 41.9794, lng: 2.8214 },
     phone: '+34 972 20 45 67',
     bestTime: 'Evening',
-    equipment: ['Comfortable clothes', 'Flat shoes', 'Water bottle']
+    equipment: ['Comfortable clothes', 'Flat shoes', 'Water bottle'],
+    detailedDescription: 'Immerse yourself in the passionate world of flamenco dance. This beginner-friendly class teaches basic flamenco steps, arm movements, and the emotional expression that makes this Spanish art form so captivating.',
+    safetyInfo: [
+      'Wear comfortable, flexible clothing',
+      'Flat shoes or dance shoes recommended',
+      'Stay hydrated during class',
+      'Inform instructor of any injuries',
+      'Start slowly and build intensity'
+    ],
+    whatToExpect: 'Basic flamenco techniques, understanding of rhythm and expression, cultural background of flamenco, and the joy of this passionate dance form.',
+    instructor: {
+      name: 'Flamenco Instructor',
+      bio: 'Professional flamenco dancer and instructor',
+      experience: '15+ years',
+      certifications: 'Flamenco Dance Certification'
+    },
+    groupSize: '8-15 people',
+    ageLimit: '12+ years',
+    facilities: [
+      { name: 'Dance Studio', icon: 'accessible' },
+      { name: 'Sound System', icon: 'accessible' },
+      { name: 'Mirrors', icon: 'accessible' }
+    ]
   }
 ];
