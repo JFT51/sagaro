@@ -753,5 +753,64 @@ export const villages: Village[] = [
       'Inspired many artists including Marc Chagall',
       'Features in the movie "Pandora and the Flying Dutchman"'
     ]
+  },
+  {
+    id: 'sant-feliu-guixols',
+    name: 'Sant Feliu de Guíxols',
+    description: 'A historic coastal town with a magnificent monastery and beautiful beaches.',
+    image: 'https://images.pexels.com/photos/1450376/pexels-photo-1450376.jpeg',
+    highlights: ['Benedictine Monastery', 'Platja de Sant Pol', 'Modernist Architecture', 'Coastal Path'],
+    coordinates: { lat: 41.7833, lng: 3.0333 },
+    population: 21500,
+    distance: '2 km',
+    founded: '10th century',
+    elevation: '20m above sea level',
+    history: 'Sant Feliu de Guíxols grew around its Benedictine monastery founded in the 10th century. The town became an important cork-producing center in the 19th century, which brought prosperity and beautiful modernist architecture. Today it combines historical heritage with modern tourism.',
+    architecture: [
+      {
+        name: 'Benedictine Monastery',
+        description: 'Pre-Romanesque and Romanesque monastery complex',
+        period: '10th-12th century'
+      },
+      {
+        name: 'Modernist Houses',
+        description: 'Beautiful examples of Catalan modernism',
+        period: '1890-1920'
+      },
+      {
+        name: 'Casino La Constància',
+        description: 'Modernist cultural center and casino',
+        period: '1888'
+      }
+    ],
+    traditions: [
+      {
+        name: 'Festa Major',
+        description: 'Annual summer festival with traditional activities',
+        when: 'August'
+      },
+      {
+        name: 'International Music Festival',
+        description: 'Classical music festival in historic venues',
+        when: 'July-August'
+      },
+      {
+        name: 'Cork Festival',
+        description: 'Celebrating the town\'s cork industry heritage',
+        when: 'September'
+      }
+    ],
+    facilities: [
+      { name: 'Free WiFi', icon: 'wifi' },
+      { name: 'Parking', icon: 'parking' },
+      { name: 'Card Payment', icon: 'card' },
+      { name: 'Accessible', icon: 'accessible' }
+    ],
+    funFacts: [
+      'Home to one of the oldest monasteries in Catalonia',
+      'Was the cork capital of the Mediterranean in the 19th century',
+      'Features beautiful modernist architecture from the cork boom era',
+      'The monastery houses an important museum of local history'
+    ]
   }
 ];

@@ -866,5 +866,134 @@ export const restaurants: Restaurant[] = [
       { name: 'Parking', icon: 'parking' },
       { name: 'Card Payment', icon: 'card' }
     ]
+  },
+  {
+    id: 'restaurant-sant-pol',
+    name: 'Restaurant Sant Pol',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    cuisine: 'Mediterranean',
+    description: 'Beachfront restaurant with fresh seafood and traditional Catalan dishes.',
+    image: 'https://images.pexels.com/photos/1581404/pexels-photo-1581404.jpeg',
+    rating: 4.6,
+    priceRange: '€€€',
+    address: 'Platja de Sant Pol, 17220 Sant Feliu de Guíxols',
+    phone: '+34 972 32 50 25',
+    coordinates: { lat: 41.7850, lng: 3.0350 },
+    openingHours: '12:00-16:00, 19:00-23:00',
+    specialties: ['Rice dishes', 'Fresh fish', 'Local wines'],
+    capacity: 95,
+    established: '1985',
+    chefStory: 'Chef Montse Ribas combines traditional Costa Brava recipes with contemporary techniques, specializing in rice dishes and fresh seafood from the local fishing fleet.',
+    signatureDishes: [
+      {
+        name: 'Arroz con Bogavante',
+        description: 'Traditional rice with lobster',
+        price: '€42',
+        ingredients: 'Fresh lobster, Bomba rice, saffron, vegetables'
+      },
+      {
+        name: 'Suquet de Peix Sant Feliu',
+        description: 'Local fish stew with traditional recipe',
+        price: '€26',
+        ingredients: 'Mixed local fish, potatoes, saffron, garlic, herbs'
+      }
+    ],
+    atmosphere: 'Relaxed beachfront setting with panoramic sea views, perfect for enjoying fresh seafood while watching the Mediterranean.',
+    awards: [
+      { name: 'Best Rice Restaurant Costa Brava', year: '2023' },
+      { name: 'Fresh Seafood Excellence', year: '2022' }
+    ],
+    facilities: [
+      { name: 'Free WiFi', icon: 'wifi' },
+      { name: 'Beach Parking', icon: 'parking' },
+      { name: 'Card Payment', icon: 'card' },
+      { name: 'Accessible', icon: 'accessible' }
+    ]
+  },
+  {
+    id: 'villa-mas-sant-feliu',
+    name: 'Villa Mas Sant Feliu',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    cuisine: 'Traditional',
+    description: 'Historic villa restaurant serving authentic Catalan cuisine since 1920.',
+    image: 'https://images.pexels.com/photos/1581405/pexels-photo-1581405.jpeg',
+    rating: 4.4,
+    priceRange: '€€',
+    address: 'Carrer de la Rambla 24, 17220 Sant Feliu de Guíxols',
+    phone: '+34 972 32 18 95',
+    coordinates: { lat: 41.7820, lng: 3.0320 },
+    openingHours: '13:00-15:30, 19:30-22:30',
+    specialties: ['Catalan stews', 'Grilled meats', 'Traditional desserts'],
+    capacity: 65,
+    established: '1920',
+    chefStory: 'Family restaurant preserving century-old Catalan recipes, with dishes prepared using traditional methods passed down through four generations of the Mas family.',
+    signatureDishes: [
+      {
+        name: 'Estofat de Bou',
+        description: 'Traditional Catalan beef stew',
+        price: '€19',
+        ingredients: 'Beef, vegetables, red wine, herbs, traditional spices'
+      },
+      {
+        name: 'Crema Catalana de la Casa',
+        description: 'House-made traditional Catalan cream',
+        price: '€7',
+        ingredients: 'Milk, eggs, sugar, cinnamon, lemon zest'
+      }
+    ],
+    atmosphere: 'Historic villa atmosphere with traditional Catalan decor, family-friendly environment in the heart of Sant Feliu.',
+    awards: [
+      { name: 'Traditional Family Restaurant', year: '2022' },
+      { name: 'Catalan Heritage Cuisine', year: '2021' }
+    ],
+    facilities: [
+      { name: 'Parking', icon: 'parking' },
+      { name: 'Card Payment', icon: 'card' },
+      { name: 'Family Friendly', icon: 'accessible' }
+    ]
+  },
+  {
+    id: 'cau-del-pescador',
+    name: 'Cau del Pescador',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    cuisine: 'Seafood',
+    description: 'Authentic fisherman\'s tavern serving the catch of the day.',
+    image: 'https://images.pexels.com/photos/1581406/pexels-photo-1581406.jpeg',
+    rating: 4.3,
+    priceRange: '€€',
+    address: 'Port de Sant Feliu, 17220 Sant Feliu de Guíxols',
+    phone: '+34 972 32 10 52',
+    coordinates: { lat: 41.7800, lng: 3.0300 },
+    openingHours: '12:00-15:00, 19:00-22:00',
+    specialties: ['Daily catch', 'Grilled fish', 'Seafood tapas'],
+    capacity: 50,
+    established: '1965',
+    chefStory: 'Traditional fisherman\'s restaurant run by local fishing families, serving the freshest catch directly from Sant Feliu\'s fishing boats using simple, authentic preparations.',
+    signatureDishes: [
+      {
+        name: 'Pescado del Día',
+        description: 'Daily fresh fish grilled with sea salt',
+        price: '€Market Price',
+        ingredients: 'Fresh daily catch, sea salt, olive oil, lemon'
+      },
+      {
+        name: 'Tapas de Mariscos',
+        description: 'Mixed seafood tapas selection',
+        price: '€16',
+        ingredients: 'Mussels, clams, prawns, squid, garlic, parsley'
+      }
+    ],
+    atmosphere: 'Authentic fishing port atmosphere with maritime decor, popular with locals and visitors seeking genuine seafood experience.',
+    awards: [
+      { name: 'Authentic Seafood Restaurant', year: '2022' },
+      { name: 'Local Fishermen\'s Choice', year: '2021' }
+    ],
+    facilities: [
+      { name: 'Port Parking', icon: 'parking' },
+      { name: 'Cash Preferred', icon: 'card' }
+    ]
   }
 ];

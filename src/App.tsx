@@ -19,7 +19,7 @@ import { markets } from './data/markets';
 import { activities } from './data/activities';
 import { translations } from './data/translations';
 import { Weather, WeatherForecast } from './types';
-import { MapPin, ArrowLeft, Phone, ExternalLink, Navigation as NavigationIcon, Play, Info, Star, Clock, Users, Calendar, Euro, Award, Camera, Utensils, Music, ShoppingBag, Activity as ActivityIcon, Globe, Wifi, CreditCard, Car, Accessibility } from 'lucide-react';
+import { MapPin, ArrowLeft, Phone, ExternalLink, Navigation as NavigationIcon, Play, Info, Star, Clock, Users, Calendar, Euro, Award, Camera, Utensils, Music, ShoppingBag, Activity as ActivityIcon, Globe, Wifi, CreditCard, Car, Accessibility, Home, CalendarDays, MessageCircle } from 'lucide-react';
 import { generateWazeUrl, formatPhoneNumber } from './utils/calendar';
 
 function App() {
@@ -722,32 +722,111 @@ function App() {
               </div>
             </div>
             
-            {/* Stats Section */}
-            <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
-              <div className="bg-gradient-to-br from-red-600 to-red-700 text-white p-6 rounded-lg">
-                <h4 className="text-2xl font-bold mb-2">{villages.length}</h4>
-                <p className="text-red-100">
-                  {language === 'nl' ? 'Prachtige Dorpen' : 'Beaux Villages'}
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-orange-600 to-orange-700 text-white p-6 rounded-lg">
-                <h4 className="text-2xl font-bold mb-2">{restaurants.length}</h4>
-                <p className="text-orange-100">
-                  {language === 'nl' ? 'Lokale Restaurants' : 'Restaurants Locaux'}
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-green-600 to-green-700 text-white p-6 rounded-lg">
-                <h4 className="text-2xl font-bold mb-2">{events.length}</h4>
-                <p className="text-green-100">
-                  {language === 'nl' ? 'Spannende Evenementen' : 'Événements Passionnants'}
-                </p>
-              </div>
-              <div className="bg-gradient-to-br from-blue-600 to-blue-700 text-white p-6 rounded-lg">
-                <h4 className="text-2xl font-bold mb-2">{activities.length}</h4>
-                <p className="text-blue-100">
-                  {language === 'nl' ? 'Avontuurlijke Activiteiten' : 'Activités Aventureuses'}
-                </p>
-              </div>
+            {/* Navigation Cards Section */}
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+              <button
+                onClick={() => handleTabChange('villages')}
+                className="group bg-gradient-to-br from-red-600 to-red-700 text-white p-8 rounded-xl hover:from-red-700 hover:to-red-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <MapPin className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{t.villages}</h3>
+                    <p className="text-red-100 text-sm">{villages.length} {language === 'nl' ? 'prachtige dorpen' : 'beaux villages'}</p>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => handleTabChange('restaurants')}
+                className="group bg-gradient-to-br from-orange-600 to-orange-700 text-white p-8 rounded-xl hover:from-orange-700 hover:to-orange-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <Utensils className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{t.restaurants}</h3>
+                    <p className="text-orange-100 text-sm">{restaurants.length} {language === 'nl' ? 'lokale restaurants' : 'restaurants locaux'}</p>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => handleTabChange('events')}
+                className="group bg-gradient-to-br from-green-600 to-green-700 text-white p-8 rounded-xl hover:from-green-700 hover:to-green-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <Calendar className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{t.events}</h3>
+                    <p className="text-green-100 text-sm">{events.length} {language === 'nl' ? 'spannende evenementen' : 'événements passionnants'}</p>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => handleTabChange('markets')}
+                className="group bg-gradient-to-br from-purple-600 to-purple-700 text-white p-8 rounded-xl hover:from-purple-700 hover:to-purple-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <ShoppingBag className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{t.markets}</h3>
+                    <p className="text-purple-100 text-sm">{markets.length} {language === 'nl' ? 'lokale markten' : 'marchés locaux'}</p>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => handleTabChange('activities')}
+                className="group bg-gradient-to-br from-blue-600 to-blue-700 text-white p-8 rounded-xl hover:from-blue-700 hover:to-blue-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <ActivityIcon className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{t.activities}</h3>
+                    <p className="text-blue-100 text-sm">{activities.length} {language === 'nl' ? 'avontuurlijke activiteiten' : 'activités aventureuses'}</p>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => handleTabChange('calendar')}
+                className="group bg-gradient-to-br from-indigo-600 to-indigo-700 text-white p-8 rounded-xl hover:from-indigo-700 hover:to-indigo-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <CalendarDays className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{t.calendar}</h3>
+                    <p className="text-indigo-100 text-sm">{language === 'nl' ? 'evenementen kalender' : 'calendrier événements'}</p>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => handleTabChange('useful')}
+                className="group bg-gradient-to-br from-teal-600 to-teal-700 text-white p-8 rounded-xl hover:from-teal-700 hover:to-teal-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <Info className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{t.useful}</h3>
+                    <p className="text-teal-100 text-sm">{language === 'nl' ? 'nuttige informatie' : 'infos utiles'}</p>
+                  </div>
+                </div>
+              </button>
+
+              <button
+                onClick={() => handleTabChange('chat')}
+                className="group bg-gradient-to-br from-pink-600 to-pink-700 text-white p-8 rounded-xl hover:from-pink-700 hover:to-pink-800 transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-xl"
+              >
+                <div className="flex flex-col items-center space-y-4">
+                  <MessageCircle className="h-12 w-12 group-hover:scale-110 transition-transform duration-300" />
+                  <div className="text-center">
+                    <h3 className="text-xl font-bold mb-2">{t.chat}</h3>
+                    <p className="text-pink-100 text-sm">{language === 'nl' ? 'chat met reizigers' : 'chat avec voyageurs'}</p>
+                  </div>
+                </div>
+              </button>
             </div>
           </div>
         );
@@ -895,7 +974,7 @@ function App() {
     <div className="min-h-screen bg-black text-white flex">
       <Navigation activeTab={activeTab} onTabChange={handleTabChange} language={language} />
       
-      <div className="flex-1 flex flex-col">
+      <div className="flex-1 flex flex-col lg:ml-0 ml-20">
         <Header language={language} onLanguageChange={changeLanguage} />
         
         <main className="flex-1 px-4 sm:px-6 lg:px-8 py-8">

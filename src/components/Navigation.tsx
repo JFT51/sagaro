@@ -23,7 +23,7 @@ interface NavigationProps {
 
 const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange, language }) => {
   const [isHovered, setIsHovered] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(true); // Default open on mobile
   const t = translations[language];
 
   const tabs = [
@@ -40,7 +40,7 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange, languag
 
   const handleTabChange = (tabId: string) => {
     onTabChange(tabId);
-    setIsMobileMenuOpen(false); // Close mobile menu when tab is selected
+    // Don't close mobile menu when tab is selected - keep icons visible
   };
 
   return (
@@ -58,46 +58,34 @@ const Navigation: React.FC<NavigationProps> = ({ activeTab, onTabChange, languag
         )}
       </button>
 
-      {/* Mobile Menu Overlay */}
+      {/* Mobile Menu - Show icons by default */}
       {isMobileMenuOpen && (
-        <div className="lg:hidden fixed inset-0 z-40">
-          {/* Backdrop */}
-          <div 
-            className="absolute inset-0 bg-black/50 backdrop-blur-sm"
-            onClick={() => setIsMobileMenuOpen(false)}
-          />
-          
-          {/* Menu Content */}
-          <div className="absolute left-0 top-0 h-full w-80 bg-black border-r border-gray-800 shadow-xl">
-            <div className="p-4 pt-20">
-              <div className="flex items-center space-x-3 mb-8">
-                <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center flex-shrink-0">
-                  <MapPin className="h-5 w-5 text-white" />
-                </div>
-                <div>
-                  <h1 className="text-lg font-bold text-white">S'Agaro Guide</h1>
-                </div>
+        <div className="lg:hidden fixed left-0 top-0 h-full w-20 bg-black border-r border-gray-800 shadow-xl z-40">
+          <div className="p-4 pt-20">
+            <div className="flex items-center justify-center mb-8">
+              <div className="w-8 h-8 bg-red-600 rounded flex items-center justify-center flex-shrink-0">
+                <MapPin className="h-5 w-5 text-white" />
               </div>
+            </div>
 
-              <div className="space-y-2">
-                {tabs.map((tab) => {
-                  const Icon = tab.icon;
-                  return (
-                    <button
-                      key={tab.id}
-                      onClick={() => handleTabChange(tab.id)}
-                      className={`w-full flex items-center space-x-3 px-4 py-3 text-left transition-all duration-200 rounded-lg ${
-                        activeTab === tab.id
-                          ? 'bg-red-600 text-white'
-                          : 'text-gray-400 hover:text-white hover:bg-gray-900'
-                      }`}
-                    >
-                      <Icon className="h-5 w-5 flex-shrink-0" />
-                      <span className="whitespace-nowrap">{tab.label}</span>
-                    </button>
-                  );
-                })}
-              </div>
+            <div className="space-y-2">
+              {tabs.map((tab) => {
+                const Icon = tab.icon;
+                return (
+                  <button
+                    key={tab.id}
+                    onClick={() => handleTabChange(tab.id)}
+                    className={`w-full flex items-center justify-center p-3 transition-all duration-200 rounded-lg ${
+                      activeTab === tab.id
+                        ? 'bg-red-600 text-white'
+                        : 'text-gray-400 hover:text-white hover:bg-gray-900'
+                    }`}
+                    title={tab.label}
+                  >
+                    <Icon className="h-5 w-5 flex-shrink-0" />
+                  </button>
+                );
+              })}
             </div>
           </div>
         </div>

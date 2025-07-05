@@ -220,7 +220,7 @@ export const activities: Activity[] = [
       name: 'Wine Tourism Specialist',
       bio: 'Certified sommelier and wine tourism expert',
       experience: '10+ years',
-      certifications: 'Certified Sommelier, Wine Tourism Guide'
+      certifications:  'Certified Sommelier, Wine Tourism Guide'
     },
     groupSize: '8-16 people',
     ageLimit: '18+ years',
@@ -760,6 +760,120 @@ export const activities: Activity[] = [
       { name: 'Dance Studio', icon: 'accessible' },
       { name: 'Sound System', icon: 'accessible' },
       { name: 'Mirrors', icon: 'accessible' }
+    ]
+  },
+  {
+    id: 'monastery-tour',
+    name: 'Monastery Historical Tour',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    description: 'Explore the ancient Benedictine monastery and its history.',
+    image: 'https://images.pexels.com/photos/1582/pexels-photo-1582.jpeg',
+    category: 'Cultural',
+    duration: '1.5 hours',
+    difficulty: 'Easy',
+    price: '€8-€12',
+    coordinates: { lat: 41.7820, lng: 3.0320 },
+    phone: '+34 972 82 15 75',
+    bestTime: 'Morning or afternoon',
+    equipment: ['Comfortable shoes', 'Camera'],
+    detailedDescription: 'Discover the fascinating history of the Benedictine monastery of Sant Feliu de Guíxols, founded in the 10th century. This guided tour explores the pre-Romanesque and Romanesque architecture, the museum, and the role of the monastery in the development of the town.',
+    safetyInfo: [
+      'Wear comfortable walking shoes',
+      'Be respectful in religious areas',
+      'Follow guide instructions',
+      'No flash photography in certain areas',
+      'Stay with the group'
+    ],
+    whatToExpect: 'Ancient monastery architecture, historical artifacts, beautiful cloisters, understanding of monastic life, and insights into medieval Catalonia.',
+    instructor: {
+      name: 'Art Historian Guide',
+      bio: 'Specialist in medieval Catalan architecture and monastic history',
+      experience: '12+ years',
+      certifications: 'Art History Degree, Official Guide License'
+    },
+    groupSize: '8-20 people',
+    ageLimit: 'All ages',
+    facilities: [
+      { name: 'Historic Monastery', icon: 'accessible' },
+      { name: 'Museum', icon: 'accessible' },
+      { name: 'Parking Available', icon: 'parking' }
+    ]
+  },
+  {
+    id: 'coastal-photography',
+    name: 'Coastal Photography Workshop',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    description: 'Learn photography techniques while capturing the beautiful Costa Brava coastline.',
+    image: 'https://images.pexels.com/photos/1583/pexels-photo-1583.jpeg',
+    category: 'Cultural',
+    duration: '3 hours',
+    difficulty: 'Easy',
+    price: '€45-€65',
+    coordinates: { lat: 41.7850, lng: 3.0350 },
+    phone: '+34 972 32 45 89',
+    bestTime: 'Golden hour (sunrise/sunset)',
+    equipment: ['Camera (DSLR or smartphone)', 'Comfortable shoes'],
+    detailedDescription: 'Learn the art of coastal photography while exploring the stunning landscapes around Sant Feliu de Guíxols. This workshop covers composition, lighting, and technical skills while capturing the beauty of the Mediterranean coastline.',
+    safetyInfo: [
+      'Wear appropriate footwear for coastal terrain',
+      'Protect camera equipment from sand and water',
+      'Stay aware of tides and waves',
+      'Follow guide to safe shooting locations',
+      'Bring extra batteries and memory cards'
+    ],
+    whatToExpect: 'Photography instruction, stunning coastal locations, hands-on practice, composition techniques, and a portfolio of beautiful coastal images.',
+    instructor: {
+      name: 'Professional Photographer',
+      bio: 'Award-winning landscape photographer specializing in Mediterranean coastal scenes',
+      experience: '18+ years',
+      certifications: 'Professional Photography Certification'
+    },
+    groupSize: '6-10 people',
+    ageLimit: '14+ years',
+    facilities: [
+      { name: 'Scenic Locations', icon: 'accessible' },
+      { name: 'Equipment Advice', icon: 'accessible' },
+      { name: 'Photo Editing Tips', icon: 'card' }
+    ]
+  },
+  {
+    id: 'gavarres-hiking',
+    name: 'Gavarres Natural Park Hiking',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    description: 'Explore the cork oak forests and ancient paths of the Gavarres massif.',
+    image: 'https://images.pexels.com/photos/1584/pexels-photo-1584.jpeg',
+    category: 'Hiking',
+    duration: '4 hours',
+    difficulty: 'Moderate',
+    price: '€25-€35',
+    coordinates: { lat: 41.7900, lng: 3.0200 },
+    phone: '+34 972 32 67 45',
+    bestTime: 'Morning',
+    equipment: ['Hiking boots', 'Water', 'Sun protection', 'Camera'],
+    detailedDescription: 'Discover the natural beauty of the Gavarres massif, a protected natural area known for its cork oak forests, ancient stone huts, and panoramic views. This guided hike follows traditional paths used by cork harvesters and charcoal makers.',
+    safetyInfo: [
+      'Wear appropriate hiking footwear',
+      'Bring plenty of water (1.5L minimum)',
+      'Use sun protection',
+      'Stay on marked trails',
+      'Inform guide of fitness level and medical conditions'
+    ],
+    whatToExpected: 'Cork oak forests, traditional stone huts (barraques), panoramic views of the coast, diverse Mediterranean flora and fauna, and insights into traditional forest uses.',
+    instructor: {
+      name: 'Nature Guide',
+      bio: 'Local naturalist specializing in Mediterranean forest ecosystems',
+      experience: '14+ years',
+      certifications: 'Nature Guide Certification, Forest Ecology Degree'
+    },
+    groupSize: '8-15 people',
+    ageLimit: '12+ years (good fitness required)',
+    facilities: [
+      { name: 'Natural Park', icon: 'accessible' },
+      { name: 'Marked Trails', icon: 'accessible' },
+      { name: 'Scenic Viewpoints', icon: 'accessible' }
     ]
   }
 ];

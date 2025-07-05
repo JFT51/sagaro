@@ -998,5 +998,165 @@ export const events: Event[] = [
       { name: 'Guided Tour', icon: 'accessible' },
       { name: 'Lunch Included', icon: 'card' }
     ]
+  },
+  {
+    id: 'monastery-festival',
+    name: 'Monastery Music Festival',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    description: 'Classical concerts in the historic Benedictine monastery.',
+    image: 'https://images.pexels.com/photos/1763095/pexels-photo-1763095.jpeg',
+    date: '2024-07-21',
+    time: '21:00',
+    location: 'Benedictine Monastery',
+    category: 'Music',
+    price: '€18-€35',
+    coordinates: { lat: 41.7820, lng: 3.0320 },
+    recurring: true,
+    eventHistory: 'The Monastery Music Festival has been held since 1958, taking advantage of the exceptional acoustics of the 10th-century Benedictine monastery to present classical music concerts.',
+    program: [
+      {
+        title: 'Monastery Tour',
+        time: '20:00',
+        description: 'Guided tour of the historic monastery'
+      },
+      {
+        title: 'Chamber Music Concert',
+        time: '21:00',
+        description: 'String quartet in the monastery church',
+        artist: 'Quartet Casals'
+      },
+      {
+        title: 'Wine Reception',
+        time: '22:30',
+        description: 'Local wine tasting in the cloister'
+      }
+    ],
+    ticketPrices: [
+      { type: 'Concert Only', price: '€18' },
+      { type: 'Concert + Tour', price: '€25' },
+      { type: 'Full Experience', price: '€35' }
+    ],
+    venue: {
+      name: 'Benedictine Monastery',
+      capacity: '200 people',
+      facilities: 'Historic monastery, exceptional acoustics, cloister'
+    },
+    eventDuration: '3 hours',
+    organizer: 'Festival Internacional de Música de Sant Feliu',
+    facilities: [
+      { name: 'Historic Venue', icon: 'accessible' },
+      { name: 'Parking Available', icon: 'parking' },
+      { name: 'Wine Reception', icon: 'card' }
+    ]
+  },
+  {
+    id: 'cork-festival',
+    name: 'Cork Heritage Festival',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    description: 'Celebrating the town\'s cork industry heritage with demonstrations and crafts.',
+    image: 'https://images.pexels.com/photos/1763096/pexels-photo-1763096.jpeg',
+    date: '2024-07-28',
+    time: '10:00',
+    location: 'Historic Center',
+    category: 'Culture',
+    price: 'Free',
+    coordinates: { lat: 41.7820, lng: 3.0320 },
+    recurring: true,
+    eventHistory: 'Sant Feliu de Guíxols was the cork capital of the Mediterranean in the 19th century. This festival celebrates that heritage with traditional cork-working demonstrations and exhibitions.',
+    program: [
+      {
+        title: 'Cork Museum Opening',
+        time: '10:00',
+        description: 'Special exhibition on cork industry history'
+      },
+      {
+        title: 'Traditional Cork Working',
+        time: '11:00',
+        description: 'Artisans demonstrate traditional cork crafts'
+      },
+      {
+        title: 'Modernist Architecture Tour',
+        time: '14:00',
+        description: 'Tour of buildings from the cork boom era'
+      },
+      {
+        title: 'Cork Products Market',
+        time: '16:00',
+        description: 'Local artisans sell cork products and crafts'
+      }
+    ],
+    ticketPrices: [
+      { type: 'Free Entry', price: 'Free' }
+    ],
+    venue: {
+      name: 'Sant Feliu Historic Center',
+      capacity: '800 people',
+      facilities: 'Museum, historic buildings, market stalls'
+    },
+    eventDuration: '8 hours',
+    organizer: 'Ajuntament de Sant Feliu de Guíxols',
+    facilities: [
+      { name: 'Free Entry', icon: 'accessible' },
+      { name: 'Historic Tour', icon: 'accessible' },
+      { name: 'Parking Available', icon: 'parking' }
+    ]
+  },
+  {
+    id: 'seafood-festival',
+    name: 'Seafood Festival',
+    village: 'Sant Feliu de Guíxols',
+    villageId: 'sant-feliu-guixols',
+    description: 'Fresh seafood celebration with local fishermen and restaurants.',
+    image: 'https://images.pexels.com/photos/1763097/pexels-photo-1763097.jpeg',
+    date: '2024-07-25',
+    time: '18:00',
+    location: 'Port Area',
+    category: 'Food',
+    price: '€12-€25',
+    coordinates: { lat: 41.7800, lng: 3.0300 },
+    recurring: true,
+    eventHistory: 'The Seafood Festival celebrates Sant Feliu\'s maritime heritage and the daily catch of local fishermen, featuring traditional seafood preparations and modern culinary interpretations.',
+    program: [
+      {
+        title: 'Fish Market Tour',
+        time: '18:00',
+        description: 'Visit the local fish market with fishermen'
+      },
+      {
+        title: 'Seafood Tasting',
+        time: '19:00',
+        description: 'Sample fresh seafood prepared by local restaurants'
+      },
+      {
+        title: 'Cooking Demonstration',
+        time: '20:00',
+        description: 'Traditional seafood recipes',
+        artist: 'Local Chefs'
+      },
+      {
+        title: 'Live Music',
+        time: '21:00',
+        description: 'Traditional Catalan music by the sea',
+        artist: 'Havaneres Group'
+      }
+    ],
+    ticketPrices: [
+      { type: 'Tasting Plate', price: '€12' },
+      { type: 'Full Menu', price: '€25' }
+    ],
+    venue: {
+      name: 'Sant Feliu Port',
+      capacity: '600 people',
+      facilities: 'Port setting, outdoor tents, live stage'
+    },
+    eventDuration: '4 hours',
+    organizer: 'Confraria de Pescadors de Sant Feliu',
+    facilities: [
+      { name: 'Port Location', icon: 'accessible' },
+      { name: 'Fresh Seafood', icon: 'card' },
+      { name: 'Live Music', icon: 'accessible' }
+    ]
   }
 ];
